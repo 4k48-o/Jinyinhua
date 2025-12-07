@@ -44,7 +44,7 @@ docker-compose up -d postgres
 
 ```bash
 docker run -d --name yantou-postgres \
-  -e POSTGRES_PASSWORD=0qww294e \
+  -e POSTGRES_PASSWORD=xxxxxxxxx \
   -e POSTGRES_DB=yantou_db \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_INITDB_ARGS="--encoding=UTF8 --locale=zh_CN.UTF-8" \
@@ -144,7 +144,7 @@ DB_CONN_MAX_AGE=600
 
 - **主机**: `localhost`
 - **端口**: `6379`
-- **密码**: `sj1qaz`
+- **密码**: `xxxxxxxxx`
 - **数据库**: `0`
 
 ### Redis 连接
@@ -155,7 +155,7 @@ Redis 连接配置在 `.env` 文件中：
 REDIS_HOST=localhost
 REDIS_PORT=6379
 REDIS_DB=0
-REDIS_PASSWORD=sj1qaz
+REDIS_PASSWORD=xxxxxxxxx
 ```
 
 ### 启动 Redis
