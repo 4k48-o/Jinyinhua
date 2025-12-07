@@ -1,0 +1,54 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(29, 35, 41, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.collapse-btn {
+  font-size: 18px;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu {
+  padding: 0 12px;
+}
+
+.username {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 0 16px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .collapse-btn {
+    margin-right: 8px;
+  }
+}
+

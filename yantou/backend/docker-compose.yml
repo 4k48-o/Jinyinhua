@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: yantou-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 0qww294e
+      POSTGRES_DB: yantou_db
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=zh_CN.UTF-8"
+    ports:
+      - "5432:5432"
+    volumes:
+      - yantou-postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: yantou-redis
+    command: redis-server --requirepass sj1qaz
+    ports:
+      - "6379:6379"
+    volumes:
+      - yantou-redis-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "sj1qaz", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  yantou-postgres-data:
+    driver: local
+  yantou-redis-data:
+    driver: local
+

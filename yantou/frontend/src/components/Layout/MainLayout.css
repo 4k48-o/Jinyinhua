@@ -1,0 +1,21 @@
+.main-layout {
+  min-height: 100vh;
+}
+
+.main-content {
+  margin: 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  min-height: calc(100vh - 112px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .main-content {
+    margin: 16px;
+    padding: 16px;
+    min-height: calc(100vh - 96px);
+  }
+}
+

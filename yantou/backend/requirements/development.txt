@@ -1,0 +1,43 @@
+# =====================================================
+# 开发环境依赖
+# =====================================================
+
+# 包含基础依赖
+-r base.txt
+
+# 代码格式化
+black>=23.12.0
+isort>=5.13.0
+
+# 代码检查
+flake8>=7.0.0
+pylint>=3.0.0
+mypy>=1.8.0
+
+# 类型检查
+django-stubs>=4.2.7
+types-requests>=2.31.0
+
+# 开发服务器增强
+django-extensions>=3.2.3
+ipython>=8.18.0
+
+# 测试框架
+pytest>=7.4.4
+pytest-django>=4.8.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+factory-boy>=3.3.0
+
+# API 文档生成
+drf-spectacular>=0.27.0
+
+# 调试工具
+django-debug-toolbar>=4.2.0
+
+# 数据库工具
+django-db-connection-pool>=1.2.0
+
+# 环境管理
+python-dotenv>=1.0.0
+

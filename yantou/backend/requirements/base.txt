@@ -1,0 +1,40 @@
+# =====================================================
+# 基础依赖 - 所有环境都需要
+# =====================================================
+
+# Django 核心框架
+Django>=4.2,<5.0
+
+# Django REST Framework
+djangorestframework>=3.14.0
+
+# JWT 认证
+djangorestframework-simplejwt>=5.3.0
+PyJWT>=2.8.0,<3.0.0
+
+# CORS 跨域支持
+django-cors-headers>=4.3.0
+
+# 过滤和搜索
+django-filter>=23.3
+
+# 环境变量管理
+python-decouple>=3.8
+
+# 图片处理
+Pillow>=10.1.0
+
+# PostgreSQL 数据库驱动
+psycopg2-binary>=2.9.9
+
+# Redis 缓存和会话存储
+redis>=5.0.1
+django-redis>=5.4.0
+
+# 数据加密
+cryptography>=41.0.0
+
+# =====================================================
+# 可选：如果需要支持 MySQL
+# =====================================================
+# mysqlclient>=2.2.0
